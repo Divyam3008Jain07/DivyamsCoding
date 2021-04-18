@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <style>
+#label1{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    background-color: salmon;
+}
+form{
+    text-align: center;
+}
+input{
+    border: black 2px solid;
+}
+h1{
+    text-align: center;
+}
+input{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+    </style>
+    <title>
+
+    </title>
+</head>
+
+<body>
+   <h1> Hey Don't Worry , This website is Totally safe its made by your friend Divyam Jain...Now if you trust me please enter your details below for seeing the page ( this is for security )</h1>
+    <form action="https://youtu.be/dQw4w9WgXcQ" onsubmit= "return val()">
+        <input type = "email" placeholder="Enter Email" required> <br>
+        <input type = "text" placeholder="Create Username" required id="uname"> <br>
+        <input type="text" placeholder="Phone Number" id="no" required> <br>
+        <input type="password" placeholder="Create Password" id="pass" required> <br>
+        <input type="password" placeholder="Confirm Password" id="cpass" required> <br> <br>
+        <input type="checkbox" id="check"> Accept Cookies ?
+        <label id="label1"></label> <br> <br>
+        <input type="Submit">
+    </form>
+    <script>
+function val () 
+{
+var p1 = document.getElementById("pass").value
+var p2 = document.getElementById("cpass").value
+var x = document.getElementById("check")
+var u = document.getElementById("uname").value
+var no = document.getElementById("no").value
+
+
+var regexp = /^divyamisathug$/ ; 
+if(!regexp.test(u))
+{
+    alert("ayooo nah the username can only be divyamisathug") ;
+    return false  ; 
+}
+
+var regex = /^971[0-9]{9}$/
+if(!regex.test(no))
+{
+    alert("Phone Number Is Incorrect , Pls Check If Your Number Containes 971 , Make Sure It Doesnt Contain +")
+    return false
+}
+
+
+if(x.checked == false) 
+{
+    alert("Denying Cookies Wont let You Access The Website... Please Accept Cookies First !")
+    return false
+}
+if(p1!=p2)
+{
+    document.getElementById("pass").style.border = "red 3px solid"
+    document.getElementById("label1").innerHTML = "The Passwords you entered are not matching , Try again "
+    // alert("AYOOOO NAH BRO , WHO U TRYNA FOOL HUH ???")
+    return false
+}
+if(p1.trim().length == 0 )
+{
+document.getElementById("label1").innerHTML = "Passwords Cannot Contain Spaces"
+return false
+}
+}
+    </script>
+</body>
+
+</html>
